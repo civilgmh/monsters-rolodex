@@ -13,6 +13,9 @@ class App extends Component {
       monsters: [],
       searchField: ''
     };
+    
+    // verbose way to bind <this> if not using ES6 arrow functions
+    //this.handleChange = this.handleChange.bind(this);
   }
   
   componentDidMount() {
@@ -21,6 +24,8 @@ class App extends Component {
       .then(users => this.setState({ monsters: users }));
   }
   
+  // ES6 arrow functions automatically bind <this> to the place where the arrow function was defined (lexical scoping)
+  // if you were to implement using a regular function, would have to explicitly bind <this> within the function to <this> in App component 
   handleChange = e => {
     this.setState({ searchField: e.target.value })
   };
