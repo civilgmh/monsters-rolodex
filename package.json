@@ -2,7 +2,7 @@
   "name": "monsters-rolodex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gitlab.com/civilgmh/monsters-rolodex",
+  "homepage": "https://civilgmh.github.com/monsters-rolodex",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -28,5 +28,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
