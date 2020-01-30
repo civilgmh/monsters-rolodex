@@ -22,12 +22,14 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(users => this.setState({ monsters: users }));
+      //.then(users => console.log(users ));
   }
   
   // ES6 arrow functions automatically bind <this> to the place where the arrow function was defined (lexical scoping)
   // if you were to implement using a regular function, would have to explicitly bind <this> within the function to <this> in App component 
   handleChange = e => {
-    this.setState({ searchField: e.target.value })
+    console.log(e.target.value);
+    this.setState({ searchField: e.target.value }, () => console.log(this.state));
   };
 
   render() {
